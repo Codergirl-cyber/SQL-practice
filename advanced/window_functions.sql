@@ -1,0 +1,21 @@
+-- ============================================================================
+-- TOPIC: Window Functions
+-- ============================================================================
+-- Window functions perform calculations across a set of rows related to the
+-- current row, without collapsing them into a single output row.
+-- Common functions: ROW_NUMBER, RANK, DENSE_RANK, NTILE, LAG, LEAD,
+--                   SUM/AVG OVER(PARTITION BY ...)
+-- ============================================================================
+
+-- ----------------------------------------------------------------------------
+-- PRACTICE SECTION: Write your own window function queries below
+-- ----------------------------------------------------------------------------
+-- TODO: Use ROW_NUMBER to number employees within each department, ordered by salary descending.
+-- TODO: Use RANK and DENSE_RANK to rank employees by salary and compare the difference.
+-- TODO: Use NTILE(4) to divide employees into 4 salary quartiles.
+-- TODO: Use LAG and LEAD to compare an employee's salary with the previous/next employee.
+-- TODO: Use a windowed SUM to calculate a running total of salary ordered by hire date.
+-- TODO: Use ROW_NUMBER to find the top 2 highest-paid employees per department.
+-- TODO: Use LAG to show each employee's salary compared to the previous hire.
+-- TODO: Calculate a running average of salary ordered by hire date.
+

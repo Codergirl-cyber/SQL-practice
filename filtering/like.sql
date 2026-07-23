@@ -1,0 +1,21 @@
+-- ============================================================================
+-- TOPIC: LIKE — Pattern Matching
+-- ============================================================================
+-- LIKE is used with WHERE to search for a pattern in a column.
+-- Wildcards:
+--   %   Matches zero or more characters
+--   _   Matches exactly one character
+-- ============================================================================
+
+-- ----------------------------------------------------------------------------
+-- PRACTICE SECTION: Write your own LIKE queries below
+-- ----------------------------------------------------------------------------
+-- TODO: Find employees whose name starts with 'A'.
+-- TODO: Find employees whose name ends with 'son'.
+-- TODO: Find employees whose name contains 'son' anywhere.
+-- TODO: Find job titles that start with 'Senior'.
+-- TODO: Find names with exactly 4 letters (using _).
+-- TODO: Find employees whose name contains 'er'.
+-- TODO: Find all job titles that start with 'S'.
+-- TODO: Find employees whose name is exactly 5 characters long.
+
