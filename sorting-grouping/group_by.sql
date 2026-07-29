@@ -1,18 +1,91 @@
--- ============================================================================
--- TOPIC: GROUP BY
--- ============================================================================
--- GROUP BY groups rows that have the same values in specified columns,
--- typically used with aggregate functions (COUNT, SUM, AVG, etc.).
--- ============================================================================
+-- ==========================================
+-- GROUP BY Clause Practice
+-- ==========================================
+-- The GROUP BY clause groups rows that have
+-- the same values into summary rows.
+-- It is commonly used with aggregate
+-- functions like COUNT, SUM, AVG, MIN, MAX.
+-- ==========================================
 
--- ----------------------------------------------------------------------------
--- PRACTICE SECTION: Write your own GROUP BY queries below
--- ----------------------------------------------------------------------------
--- TODO: Count the number of employees per department (use dept_id).
--- TODO: Calculate the average salary per department.
--- TODO: Group by multiple columns (e.g., dept_id, job_title) with COUNT.
--- TODO: Use GROUP BY with a JOIN to show department names instead of IDs.
--- TODO: Find the total salary paid by each department.
--- TODO: Count the number of employees per job title.
--- TODO: Find the highest salary per department.
+-- Display all employees
+SELECT *
+FROM employees;
 
+-- Count employees in each department
+SELECT department, COUNT(*) AS total_employees
+FROM employees
+GROUP BY department;
+
+-- Calculate total salary for each department
+SELECT department, SUM(salary) AS total_salary
+FROM employees
+GROUP BY department;
+
+-- Calculate average salary for each department
+SELECT department, AVG(salary) AS average_salary
+FROM employees
+GROUP BY department;
+
+-- Find the highest salary in each department
+SELECT department, MAX(salary) AS highest_salary
+FROM employees
+GROUP BY department;
+
+-- Find the lowest salary in each department
+SELECT department, MIN(salary) AS lowest_salary
+FROM employees
+GROUP BY department;
+
+-- Count employees by job title
+SELECT job_title, COUNT(*) AS total_employees
+FROM employees
+GROUP BY job_title;
+
+-- Count employees by department and job title
+SELECT department, job_title, COUNT(*) AS total_employees
+FROM employees
+GROUP BY department, job_title;
+
+-- ==========================================
+-- Practice Questions with Answers
+-- ==========================================
+
+-- 1. Count the number of employees in each department.
+SELECT department, COUNT(*) AS total_employees
+FROM employees
+GROUP BY department;
+
+-- 2. Find the average salary in each department.
+SELECT department, AVG(salary) AS average_salary
+FROM employees
+GROUP BY department;
+
+-- 3. Find the highest salary in each department.
+SELECT department, MAX(salary) AS highest_salary
+FROM employees
+GROUP BY department;
+
+-- 4. Find the lowest salary in each department.
+SELECT department, MIN(salary) AS lowest_salary
+FROM employees
+GROUP BY department;
+
+-- 5. Find the total salary in each department.
+SELECT department, SUM(salary) AS total_salary
+FROM employees
+GROUP BY department;
+
+-- 6. Count employees by job title.
+SELECT job_title, COUNT(*) AS total_employees
+FROM employees
+GROUP BY job_title;
+
+-- 7. Count employees by department and job title.
+SELECT department, job_title, COUNT(*) AS total_employees
+FROM employees
+GROUP BY department, job_title;
+
+-- 8. Find the average salary by job title.
+SELECT job_title, AVG(salary) AS average_salary
+FROM employees
+GROUP BY job_title;
